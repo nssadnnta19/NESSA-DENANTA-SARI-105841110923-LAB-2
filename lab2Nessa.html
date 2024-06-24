@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1><center> TUGAS LAB 3 </center></h1>
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
+
+<script>
+
+// Fungsi yang mengembalikan nilai bertipe integer
+ function fungsiInteger(a, b) {
+    return a - b;
+}
+
+// Fungsi yang mengembalikan nilai boolean
+function fungsiBoolean(a, b) {
+    return a || b;
+}
+ 
+ // Fungsi yang mengembalikan nilai bertipe string
+ function gabungString(NamaDepan,  NamaBelakang) {
+    return NamaDepan + " " + NamaBelakang ;
+}
+
+// Fungsi yang mengembalikan nilai bertipe boolean
+ function perbandinganTipe1(a, b) {
+    return a == b;
+}
+
+function perbandinganTipe2(a, b) {
+    return a === b;
+}
+
+// Menampilkan hasil fungsi di halaman
+document.getElementById("1").innerHTML = "Output Integer: " + fungsiInteger(5, 3);
+document.getElementById("2").innerHTML = "Output Boolean: " + fungsiBoolean(true,false);
+document.getElementById("3").innerHTML = "Nama lengkap: " + gabungString("Nessa", "Sari");
+document.getElementById("4").innerHTML = "Output Boolean 1: " + perbandinganTipe1(5, '5');
+document.getElementById("5").innerHTML = "Output Boolean 2: " + perbandinganTipe2(5, '5');
+
+let nilaiMahasiswa = [71, 80, 12, 19, 15]
+    nilaiMahasiswa.map(function(indeks,nilai){
+        document.write(" indeks dari " + nilai + " adalah "+ indeks + "<br>");   
+    });
+
+//Contoh kasus untuk if else
+let nilai = 80;
+if (nilai >= 80) {
+    document.write("Nilai kamu A<br>");
+} else if (nilai >= 70) {
+    document.write("Nilai kamu B<br>");
+} else if (nilai >= 60) {
+    document.write("Nilai kamu C<br>");
+} else {
+    document.write("Nilai kamu Nol<br>");
+}
+
+//Geme check jodoh
+let namaCewek = "kamu";
+let namaCowok = "aku";
+
+let hasil = Math.floor(Math.random() * 71) + 30;
+if (hasil >= 80) {
+    document.write("Selamat " + namaCewek + " dan " + namaCowok + " adalah jodoh sejati<br>");
+} else if (hasil >= 70) {
+    document.write("Selamat " + namaCewek + " dan " + namaCowok + " adalah jodoh sengajai<br>");
+} else if (hasil >= 60) {
+    document.write("Selamat " + namaCewek + " dan " + namaCowok + " adalah jodoh palsu<br>");
+} else {
+    document.write("Maaf " + namaCewek + " dan " + namaCowok + " tidak berjodoh<br>");
+}
+
+</script>
+</body>
+</html>
